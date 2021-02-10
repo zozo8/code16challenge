@@ -1,0 +1,80 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>#code16challenge</title>
+ <style>
+    @font-face {
+        font-family: 'c64';
+        src: url('Commodore-64-v6.3.ttf') format('truetype');
+    }
+  
+  html,
+  body {
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  body {
+    background-color: #A0A0FF;
+    padding: 4.5vw;
+    font-family: c64, helvetica, sans-serif;
+    letter-spacing: .2vw;
+  }
+  
+  .frame {
+    background-color: #4040E0;
+    height: 95%;
+    padding: 1.5vw 0;
+    color: #A0A0FF;
+  }
+  
+  .heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    padding: 0.9vw;
+  }
+  
+  .ready {
+    padding: 0.4vw;
+  }
+
+  #canvas {
+    height: 459px;
+    width: 96%;
+    display: block;
+    margin-left: 10px;
+  }
+
+  #terminal {
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding: 20vw 4.7vw 0;
+    z-index: 1;
+  }
+
+ </style>
+ <script src="script.js"></script>
+</head>
+<body>
+    <div class="frame">
+        <h1 class="heading">**** Zozodore 64 ****</h1>
+        <h2 class="heading">64K ram system 38911 basic bytes free</h2>
+        <span class="heading ready">Ready .</span>
+        <div id="terminal">
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+
+      <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+      <audio id="player" controls autoplay loop>
+        <source src="beverly_hills_cop.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+</html>
